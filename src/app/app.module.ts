@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CarComponent } from './components/car/car.component';
 import { CarlistComponent } from './components/carlist/carlist.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -13,6 +14,8 @@ import { CarlistComponent } from './components/carlist/carlist.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
