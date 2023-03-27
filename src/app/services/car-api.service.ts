@@ -9,7 +9,7 @@ import { catchError, tap } from 'rxjs';
 export class CarApiService {
 
   constructor(private _http : HttpClient) { }
-  private _siteURL = "localhost:5050/cars";
+  private _siteURL = "http://localhost:5050/cars";
   getCarDetails():Observable<any> {
 
     return this._http.get<ICar>(this._siteURL)
