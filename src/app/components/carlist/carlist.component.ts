@@ -8,7 +8,7 @@ import { OnInit } from '@angular/core'
   styleUrls: ['./carlist.component.css']
 })
 export class CarlistComponent implements OnInit{
-  carsData!:ICar ;
+  carsData:ICar | any ;
   show!:boolean;
   constructor(private _carAPIService:CarApiService){}
 

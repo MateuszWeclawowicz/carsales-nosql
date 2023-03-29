@@ -1,7 +1,7 @@
 <div class='container mt-3 mb-3'>
     <button (click)="show = !show">{{show ? 'Hide' : 'Add a Car'}}</button>
     <div>
-    <div >*ngIf="show"
+    <div *ngIf="show">
       <form>
         <label>Make</label>
         <input type="text" name="make" placeholder="Enter Make" #make>
@@ -22,5 +22,5 @@
     </div>
   
     <div class='container'>
-      <app-car  [carData]="carData" *ngFor="let carData in carsData"></app-car>
+      <app-car  [carData]="carData" *ngFor="let carData of carsData"></app-car>
     </div>
