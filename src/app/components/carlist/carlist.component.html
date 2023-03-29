@@ -1,26 +1,45 @@
 <div class='container mt-3 mb-3'>
     <button (click)="show = !show">{{show ? 'Hide' : 'Add a Car'}}</button>
     <div>
-    <div *ngIf="show">
-      <form>
-        <label>Make</label>
-        <input type="text" name="make" placeholder="Enter Make" #make>
-  
-        <label>Model</label>
-        <input type="text" name="model" placeholder="Enter Model" #model>
-  
-        <label>Year</label>
-        <input type="text" name="year" placeholder="Enter Year" #year>
-  
-        <label>Image</label>
-        <input type="text" name="imageURL" placeholder="Enter Link to Image" #imageUrl>
-  
-        <button class="btn btn-primary" type="submit" (click)="addCar(make.value, 
-                  model.value,year.value,imageUrl.value)">Add Car</button>
-      </form>
-    </div>
+      <div *ngIf="show">
+        <form>
+          <div class="row">
+            <div class="col-md col-12">
+              <input type="text" class="form-control" name="make" placeholder="Enter Make" #make>
+            </div>
+          
+            <div class="col-md col-12">
+              <input type="text" class="form-control" name="model" placeholder="Enter Model" #model>
+            </div>
+          
+            <div class="col-md col-12">
+              <input type="text" class="form-control" name="year" placeholder="Enter Year" #year>
+            </div>
+          
+          
+            <div class="col-md-4 col-12">
+              <input type="text" class="form-control" name="imageURL" placeholder="Enter Link to Image" #imageUrl>
+            </div>
+          
+          <!-- <label>Make</label>
+          
+    
+          <label>Model</label>
+          
+    
+          <label>Year</label>
+          
+    
+          <label>Image</label> -->
+          
+    
+          <button class="btn btn-primary col-4 col-md" type="submit" (click)="addCar(make.value, 
+                    model.value,year.value,imageUrl.value)">Add Car</button>
+          </div>
+        </form>
+      </div>
     </div>
   
     <div class='container'>
-      <app-car  [carData]="carData" *ngFor="let carData of carsData"></app-car>
+      <app-car  [carData]="carData" *ngFor="let carData of carsData" (carDeletedEvent)="deleteCar($event)"></app-car>
     </div>
