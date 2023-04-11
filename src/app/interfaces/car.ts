@@ -15,6 +15,12 @@ export class NewCar implements ICar{
         this.make = make;
         this.model = model;
         this.year = year;
-        this.imageURL = imageURL;
+        if(imageURL == ''){
+            this.imageURL = '../../../error.jpg';
+        }
+        else{
+            this.imageURL = imageURL;
+        }
+        
     }
 }

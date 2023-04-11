@@ -3,14 +3,14 @@ import { ICar } from '../interfaces/car';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class CarApiService {
 
   constructor(private _http : HttpClient) { }
-  private _siteURL = "http://localhost:5050/cars/";
+  private _siteURL = environment.apiURL;
   getCarDetails():Observable<any> {
 
     return this._http.get<ICar>(this._siteURL)

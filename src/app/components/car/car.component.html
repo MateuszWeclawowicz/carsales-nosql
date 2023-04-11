@@ -1,23 +1,40 @@
-<div class='container'>
-    <div class='row border-bottom mb-2'>
-        <div class="col-3">
-            {{carData.make}} 
-        </div>
-        <div class="col-2">
-            {{carData.model}}
-        </div>
-        <div class="col-2">
-            {{carData.year}}
-        </div>
-        <div class="col-3">
-            <button (click)="showCar = !showCar">{{showCar ? "Hide" : 'Show Car'}}</button>
-            <div *ngIf="showCar">
-                <img src="{{carData.imageURL}}" class="imageWidth" (click)="showCar = !showCar"/>
-            </div>
+<!-- <div class='row border-bottom mb-2'>
+    <div class="col-3">
+        {{carData.make}} 
+    </div>
+    <div class="col-2">
+        {{carData.model}}
+    </div>
+    <div class="col-2">
+        {{carData.year}}
+    </div>
+    <div class="col-3">
+        <button (click)="showCar = !showCar">{{showCar ? "Hide" : 'Show Car'}}</button>
+        <div *ngIf="showCar">
+            <img src="{{carData.imageURL}}" class="imageWidth" (click)="showCar = !showCar"/>
             
         </div>
-        <div class="col-2 justify-content-center">
-            <button class="btn btn-secondary" (click)="carDeletedEvent.emit(carData._id)">Delete</button>
-        </div>
+        
+    </div>
+    <div class="col-2 justify-content-center">
+        <button class="btn btn-secondary" (click)="carDeletedEvent.emit(carData._id)">Delete</button>
+    </div>
+</div> -->
+<div class="border-bottom mb-2 text-center">
+    <div class="col">
+        <img src="{{carData.imageURL}}" class="imageWidth">
+    </div>
+    <div class="col-12">
+        <h3>{{carData.make}}</h3>
+    </div>
+    <div class="col-12">
+        {{carData.model}}
+    </div>
+    <div class="col-12">
+        {{carData.year}}
+    </div>
+    <div class="col-12 text-center">
+        <button class="btn btn-secondary " (click)="carDeletedEvent.emit(carData._id)">Delete</button>
     </div>
 </div>
+
