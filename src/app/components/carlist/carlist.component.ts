@@ -36,19 +36,14 @@ export class CarlistComponent implements OnInit{
       { this.carsData = carsData;
       this.getCars();}
     );
-    //this.carsData.push(addCar);
-    // this.getCars();
-    return false
-    
+    return false;
   }
   deleteCar(carId:string) { 
     this._carAPIService.delCarDetails(carId).subscribe(result =>
       { 
         console.log(result);
       });
-      this.carsData = this.carsData.filter((car:ICar) => car._id !== carId)
-      // this.getCars()
-      // return false;
+      this.carsData = this.carsData.filter((car:ICar) => car._id !== carId);
       this.carDeletedEvent.emit("car got deleted");
   }
   

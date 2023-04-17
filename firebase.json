@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist\\carsales-nosql",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
