@@ -1,3 +1,8 @@
+# Link to s3 bucket
+
+http://carsales-nosql.s3-website-eu-west-1.amazonaws.com/ 
+this won't work without ec2 spun up
+
 # CarsalesNosql
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
