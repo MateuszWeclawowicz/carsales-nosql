@@ -36,6 +36,10 @@ export class CarlistComponent implements OnInit{
       { this.carsData = carsData;
       this.getCars();}
     );
+    let formField=document.getElementsByTagName('input');
+    for(let i = 0; i < formField.length; i++){
+      formField[i].value = "";
+    }
     return false;
   }
   deleteCar(carId:string) { 
